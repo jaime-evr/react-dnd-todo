@@ -1,0 +1,67 @@
+@import '~bulma/bulma';
+@import '~font-awesome/css/font-awesome.min.css';
+
+html {
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  min-height: 100%;
+  background-color: $light;
+  font-weight: 100;
+  @extend .is-size-7-desktop;
+  @extend .is-size-7-tablet;
+  @extend .is-size-5-mobile;
+}
+
+.field { margin-bottom: 10px; }
+
+.todo-text {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+}
+
+.todo-list {
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.todo-item {
+  position: relative;
+  padding: 0 50px;
+  border-bottom: 1px solid #c0c0c0;
+
+  &:hover { background-color: #f5f5f5; }
+  &:last-child { border-bottom: none; }
+}
+
+.module {
+  @include mobile { min-height: 100% }
+  min-height: 610px;
+
+  &.half {
+    @include mobile { min-height: 100% }
+    min-height: 260px;
+  }
+}
+
+.btn-delete {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.drag-box {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  display: block;
+  font-size: 1em;
+
+  @include mobile {
+    top: 3px;
+  }
+}
